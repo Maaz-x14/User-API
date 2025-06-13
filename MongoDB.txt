@@ -1,0 +1,34 @@
+No-SQL document based database
+
+Strong support for aggregation pipes
+BSON format
+
+| **MySQL (Relational)**              | **MongoDB (NoSQL - Document-Oriented)**           | **Explanation**                                                               |
+| ----------------------------------- | ------------------------------------------------- | ----------------------------------------------------------------------------- |
+| **Database**                        | **Database**                                      | Both use databases as containers for data.                                    |
+| **Table**                           | **Collection**                                    | A collection holds multiple documents (analogous to rows in a table).         |
+| **Row (Record)**                    | **Document**                                      | A document is a JSON-like object (`BSON` in MongoDB) with key-value pairs.    |
+| **Column**                          | **Field**                                         | A field in a document is like a column in a row.                              |
+| **Primary Key (e.g. id)**           | **\_id**                                          | Every MongoDB document must have a unique `_id` field.                        |
+| **JOIN**                            | **Embedding / \$lookup (limited JOIN)**           | MongoDB prefers embedding, but you can perform limited joins with `$lookup`.  |
+| **Schema**                          | **Schema-less (can be enforced with validation)** | MongoDB collections are flexible; documents can have different structures.    |
+| **SQL (Structured Query Language)** | **MongoDB Query Language (MQL)**                  | MongoDB has its own JSON-like query syntax.                                   |
+| **WHERE clause**                    | **find({ condition })**                           | Filters documents using a condition.                                          |
+| **INSERT INTO table VALUES**        | **insertOne()/insertMany()**                      | Adds new documents to a collection.                                           |
+| **SELECT \* FROM table**            | **find({})**                                      | Fetches all documents.                                                        |
+| **UPDATE table SET ...**            | **updateOne()/updateMany() with \$set**           | Updates fields in documents.                                                  |
+| **DELETE FROM table**               | **deleteOne()/deleteMany()**                      | Deletes documents from a collection.                                          |
+| **Indexes**                         | **Indexes**                                       | Both support indexes for faster search.                                       |
+| **GROUP BY**                        | **\$group (Aggregation Framework)**               | Used for aggregation operations in MongoDB.                                   |
+| **Stored Procedures**               | **JavaScript Functions / Aggregation Pipelines**  | MongoDB can use JavaScript functions, and powerful aggregation stages.        |
+| **Foreign Key Constraints**         | **Manual references / No constraints**            | MongoDB does not enforce FK; consistency is handled at the application level. |
+
+Database:
+    show dbs                                    <== Shows all databases 
+    use <DB_NAME>                               <== Creates a new database and use it
+
+Collection:
+    show collections                            <== Shows tables/collection
+    db.table.find({})                           <== Shows all enteries in a collection/table
+    db.users.insert({name: 'Maaz', age: 20})    <== Insert data
+    

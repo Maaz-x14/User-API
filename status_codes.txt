@@ -1,0 +1,18 @@
+Status codes are used to represent whether a specific http is successful or not.    
+
+Classified into 5 classes: 
+1) Informational Response (100-199)
+2) Successful Response (200-299)
+    201: Successful creation
+    202: Request accepted, but not yet acted upon
+    204: No content
+3) Redirection message (300-399)
+4) Client error response (400-499)
+    400: Bad request
+    401: Unauthorized
+    403: Forbidden
+    404: Not found
+5) Server error response (500-599)
+    500: Internal Server error(Logical error)
+    501: Not implemented
+    503: Service Unavailable

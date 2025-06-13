@@ -1,0 +1,13 @@
+A middleware lies b/w client and server. It helps process, check, or change things before the response is sent.
+
+CLIENT --> MIDDLEWARE --> SERVER
+
+When a client sends a req to server, a middleware can access that request and do processing on it.
+It can see if the request is valid. We can check, validate, who sent it. 
+
+It can perform following actions:
+1) If the request seems valid, then it can send it to server and server can access it.
+2) If not, then it would send the response back to client, saying it is not valid. The req would not be passed to server.
+
+Syntax
+app.use(fn)

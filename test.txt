@@ -1,0 +1,2 @@
+Scheme - Define the structure
+    Schema - Model <=== CRUD operations
