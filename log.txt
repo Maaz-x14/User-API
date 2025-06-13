@@ -56,3 +56,4 @@ DELETE request on /api/users/684b3b90e334e387a7a81 at 2025-06-12T21:37:54.821Z :
 GET request on / at 2025-06-13T10:06:04.006Z : ::1 
 GET request on / at 2025-06-13T10:07:29.179Z : ::1 
 GET request on / at 2025-06-13T10:08:14.237Z : ::1 
+GET request on /blog/blogpage/nudes at 2025-06-13T20:53:46.422Z : ::1 

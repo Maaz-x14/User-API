@@ -1,7 +1,9 @@
-const express = require('express')
+const express = require('express');
 
-const mongoose = require('mongoose')
-const fs = require('fs')
+const mongoose = require('mongoose');
+const fs = require('fs');
+
+const blog = require('./routes/blog');
 
 // let users = require('./MOCK_DATA.json');
 const { timeStamp } = require('console');
@@ -28,6 +30,9 @@ const userSchema = new mongoose.Schema({
 
 // Model <== Using this model we can interact with mongoDB
 const User = new mongoose.model('user', userSchema);
+
+// Middleware to get blog route
+app.use('/blog', blog)
 
 // Middleware 0
 app.use(express.urlencoded({extended: false}));
